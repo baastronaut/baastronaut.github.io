@@ -5,18 +5,46 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "analyze": "ANALYZE=true next build",
     "start": "next start",
-    "lint": "next lint"
+    "typecheck": "tsc --noEmit",
+    "export": "next build && next export",
+    "lint": "next lint",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx}\""
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/server": "^11.10.0",
+    "@mantine/core": "6.0.2",
+    "@mantine/hooks": "6.0.2",
+    "@mantine/next": "6.0.2",
+    "@mantine/notifications": "6.0.2",
+    "@next/bundle-analyzer": "^13.1.6",
+    "@tabler/icons": "^1.107.0",
+    "@tabler/icons-react": "^2.4.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.32",
     "@types/react-dom": "18.0.11",
+    "cookies-next": "^2.1.1",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-mantine": "2.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-testing-library": "^5.2.0",
+    "prettier": "^2.7.1"
   }
 }
